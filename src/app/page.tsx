@@ -1,17 +1,45 @@
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
+import {
+  Card,
+  CardAction,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { GlowingLineChart } from "@/components/ui/glowing-line";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
+
+
 export default function Home() {
+
+  
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <div className="font-sans grid grid-rows-[20px_1fr_50px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
+      <main className="flex flex-col gap-[22px] row-start-2 items-center sm:items-start">
         <Image
           className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
+          src="/yee.svg"
+          alt="yee.js logo"
+          width={280}
+          height={28}
           priority
         />
+
+        <div>
+          <HoverCard >
+            <HoverCardTrigger>
+              <Button>Click me</Button>
+            </HoverCardTrigger>
+            <HoverCardContent sideOffset={15}>
+              The React Framework – created and maintained by @vercel.
+            </HoverCardContent>
+          </HoverCard>
+        </div>
+
         <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
           <li className="mb-2 tracking-[-.01em]">
             Get started by editing{" "}
@@ -24,6 +52,31 @@ export default function Home() {
             Save and see your changes instantly.
           </li>
         </ol>
+
+        <div className="flex items-center gap-2 text-sm text-center text-black/50 dark:text-whjite/50">
+          <button />
+          <div></div>
+        </div>
+
+        <div className="w-full max-w-md">
+          <Card>
+            <CardHeader>
+              <CardTitle>Bilguudei.B</CardTitle>
+              <CardDescription>Role</CardDescription>
+              <CardAction>Admin</CardAction>
+            </CardHeader>
+            <CardContent>
+              <p>Website is Under maintenance</p>
+            </CardContent>
+            <CardFooter>
+              <p>Card Footer</p>
+            </CardFooter>
+          </Card>
+        </div>
+
+        <div className="w-full max-w-md">
+          <GlowingLineChart />
+        </div>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
