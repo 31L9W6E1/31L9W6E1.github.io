@@ -1,167 +1,262 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+// import { Button } from "@/components/ui/button";
+// import Image from "next/image";
 
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { GlowingLineChart } from "@/components/ui/glowing-line";
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/components/ui/hover-card";
+// import {
+//   Card,
+//   CardAction,
+//   CardContent,
+//   CardDescription,
+//   CardFooter,
+//   CardHeader,
+//   CardTitle,
+// } from "@/components/ui/card";
+// import { GlowingLineChart } from "@/components/ui/glowing-line";
+// import {
+//   HoverCard,
+//   HoverCardContent,
+//   HoverCardTrigger,
+// } from "@/components/ui/hover-card";
 
-export default function Home() {
+// export default function Home() {
+//   return (
+//     <div className="font-sans grid grid-rows-[20px_1fr_50px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
+//       <main className="flex flex-col gap-[22px] row-start-2 items-center sm:items-start">
+//         <Image
+//           className="dark:invert"
+//           src="/yee.svg"
+//           alt="yee.js logo"
+//           width={280}
+//           height={28}
+//           priority
+//         />
+
+//         <div>
+//           <HoverCard>
+//             <HoverCardTrigger>
+//               <Button className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]">
+//                 Fun
+//               </Button>
+//             </HoverCardTrigger>
+//             <HoverCardContent sideOffset={15}>
+//               The React Framework – created and maintained by @vercel.
+//             </HoverCardContent>
+//           </HoverCard>
+//         </div>
+
+//         <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
+//           <li className="mb-2 tracking-[-.01em]">
+//             Get started by editing{" "}
+//             <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
+//               src/app/page.tsx
+//             </code>
+//             .
+//           </li>
+//           <li className="tracking-[-.01em]">
+//             Save and see your changes instantly.
+//           </li>
+//         </ol>
+
+//         <div className="flex items-center gap-2 text-sm text-center text-black/50 dark:text-whjite/50">
+//           <button />
+//           <div></div>
+//         </div>
+
+//         <div className="w-full max-w-md">
+//           <Card>
+//             <CardHeader>
+//               <CardTitle>Bilguudei.B</CardTitle>
+//               <CardDescription>Role</CardDescription>
+//               <CardAction>Admin</CardAction>
+//             </CardHeader>
+//             <CardContent>
+//               <p>Website is Under maintenance</p>
+//             </CardContent>
+//             <CardFooter>
+//               <p>Card Footer</p>
+//             </CardFooter>
+//           </Card>
+//         </div>
+
+//         <div className="w-full max-w-md">
+//           <GlowingLineChart />
+//         </div>
+
+//         <div className="flex gap-4 items-center flex-col sm:flex-row">
+//           <a
+//             className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
+//             href="yeee.fun"
+//             target="_blank"
+//             rel="noopener noreferrer"
+//           >
+//             <Image
+//               className="dark:invert"
+//               src="/vercel.svg"
+//               alt="Vercel logomark"
+//               width={20}
+//               height={20}
+//             />
+//             Sign-in
+//           </a>
+//           <a
+//             className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
+//             href="youtube.com"
+//             target="_blank"
+//             rel="noopener noreferrer"
+//           >
+//             Sign-up
+//           </a>
+//         </div>
+//         <div>
+//           <a
+//             className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
+//             href="https://google.com"
+//           >
+//             hi
+//           </a>
+//         </div>
+//         <div>
+//           <ul className="space-y-3">
+//             <li className="flex">
+//               <svg
+//                 className="h-[1lh] w-5.5 shrink-0"
+//                 viewBox="0 0 22 22"
+//                 fill="none"
+//                 stroke-linecap="square"
+//               >
+//                 <circle cx="11" cy="11" r="11" className="fill-sky-400/25" />
+//                 <circle cx="11" cy="11" r="10.5" className="stroke-sky-400/25" />
+//                 <path
+//                   d="M8 11.5L10.5 14L14 8"
+//                   className="stroke-sky-800 dark:stroke-sky-300"
+//                 />
+//               </svg>
+//               <p className="ml-3">
+//                 Customizing your theme with
+//                 <code className="font-mono font-medium text-gray-950 dark:text-white">
+//                   @theme
+//                 </code>
+//               </p>
+//             </li>
+//             <li className="flex">
+//               <svg
+//                 className="h-[1lh] w-5.5 shrink-0"
+//                 viewBox="0 0 22 22"
+//                 fill="none"
+//                 stroke-linecap="square"
+//               >
+//                 <circle cx="11" cy="11" r="11" className="fill-sky-400/25" />
+//                 <circle cx="11" cy="11" r="10.5" className="stroke-sky-400/25" />
+//                 <path
+//                   d="M8 11.5L10.5 14L14 8"
+//                   className="stroke-sky-800 dark:stroke-sky-300"
+//                 />
+//               </svg>
+//               <p className="ml-3">
+//                 Adding custom utilities with
+//                 <code className="font-mono font-medium text-gray-950 dark:text-white">
+//                   @utility
+//                 </code>
+//               </p>
+//             </li>
+//             <li className="flex">
+//               <svg
+//                 className="h-[1lh] w-5.5 shrink-0"
+//                 viewBox="0 0 22 22"
+//                 fill="none"
+//                 stroke-linecap="square"
+//               >
+//                 <circle cx="11" cy="11" r="11" className="fill-sky-400/25" />
+//                 <circle cx="11" cy="11" r="10.5" className="stroke-sky-400/25" />
+//                 <path
+//                   d="M8 11.5L10.5 14L14 8"
+//                   className="stroke-sky-800 dark:stroke-sky-300"
+//                 />
+//               </svg>
+//               <p className="ml-3">
+//                 Adding custom variants with
+//                 <code className="font-mono font-medium text-gray-950 dark:text-white">
+//                   @variant
+//                 </code>
+//               </p>
+//             </li>
+//             <li className="flex">
+//               <svg
+//                 className="h-[1lh] w-5.5 shrink-0"
+//                 viewBox="0 0 22 22"
+//                 fill="none"
+//                 stroke-linecap="square"
+//               >
+//                 <circle cx="11" cy="11" r="11" className="fill-sky-400/25" />
+//                 <circle cx="11" cy="11" r="10.5" className="stroke-sky-400/25" />
+//                 <path
+//                   d="M8 11.5L10.5 14L14 8"
+//                   className="stroke-sky-800 dark:stroke-sky-300"
+//                 />
+//               </svg>
+//               <p className="ml-3">Code completion with instant preview</p>
+//             </li>
+//           </ul>
+//         </div>
+//       </main>
+//       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+//         <a
+//           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+//           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//         >
+//           <Image
+//             aria-hidden
+//             src="/file.svg"
+//             alt="File icon"
+//             width={16}
+//             height={16}
+//           />
+//           Learn
+//         </a>
+//         <a
+//           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+//           href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//         >
+//           <Image
+//             aria-hidden
+//             src="/window.svg"
+//             alt="Window icon"
+//             width={16}
+//             height={16}
+//           />
+//           Examples
+//         </a>
+//         <a
+//           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+//           href="yeee.fun"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//         >
+//           <Image
+//             aria-hidden
+//             src="/globe.svg"
+//             alt="Globe icon"
+//             width={16}
+//             height={16}
+//           />
+//           yeee.fun →
+//         </a>
+//       </footer>
+//     </div>
+//   );
+// }
+// }
+
+const Homepage = () => {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_50px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[22px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/yee.svg"
-          alt="yee.js logo"
-          width={280}
-          height={28}
-          priority
-        />
-
-        <div>
-          <HoverCard>
-            <HoverCardTrigger>
-              <Button className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]">
-                Fun
-              </Button>
-            </HoverCardTrigger>
-            <HoverCardContent sideOffset={15}>
-              The React Framework – created and maintained by @vercel.
-            </HoverCardContent>
-          </HoverCard>
-        </div>
-
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex items-center gap-2 text-sm text-center text-black/50 dark:text-whjite/50">
-          <button />
-          <div></div>
-        </div>
-
-        <div className="w-full max-w-md">
-          <Card>
-            <CardHeader>
-              <CardTitle>Bilguudei.B</CardTitle>
-              <CardDescription>Role</CardDescription>
-              <CardAction>Admin</CardAction>
-            </CardHeader>
-            <CardContent>
-              <p>Website is Under maintenance</p>
-            </CardContent>
-            <CardFooter>
-              <p>Card Footer</p>
-            </CardFooter>
-          </Card>
-        </div>
-
-        <div className="w-full max-w-md">
-          <GlowingLineChart />
-        </div>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="yeee.fun"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Sign-in
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="youtube.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Sign-up
-          </a>
-        </div>
-        <div>
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://google.com"
-          >
-            hi
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="yeee.fun"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          yeee.fun →
-        </a>
-      </footer>
+    <div className="Homepage">
+      
     </div>
   );
 }
+
+export default Homepage;
