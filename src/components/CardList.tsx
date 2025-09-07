@@ -104,7 +104,7 @@ const CardList = ({ title }: { title: string }) => {
               <Image
                 src={item.image}
                 alt={item.title}
-
+                fill
                 className="object-cover"
               />
             </div>
