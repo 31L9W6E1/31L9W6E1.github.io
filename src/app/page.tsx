@@ -31,7 +31,7 @@ const Homepage = () => {
           className="flex justify-center items-center mt-0 mb-0 text-sm text-muted-foreground"
           href="#"
         >
-          2025 Bilguudei.B ™ 
+          2025 Bilguudei.B ™  
         </a>
       </footer>
     </div>
