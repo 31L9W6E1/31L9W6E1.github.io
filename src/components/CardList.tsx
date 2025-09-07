@@ -101,7 +101,7 @@ const CardList = ({ title }: { title: string }) => {
             className="flex-row items-center justify-between gap-4 p-4"
           >
             <div className="w-12 h-12 rounded-sm relative overflow-hidden">
-              <img
+              <Image
                 src={item.image}
                 alt={item.title}
 

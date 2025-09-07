@@ -21,7 +21,24 @@ import EditUser from "@/components/EditUser";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import AppLineChart from "@/components/AppLineChart";
 
-const SingleUserPage = () => {
+// 1. Add `generateStaticParams` to define all user pages at build time.
+// Replace this placeholder data fetching with your actual API call.
+export async function generateStaticParams() {
+  const userDatabase = [
+    { username: "john.doe" },
+    { username: "jane.doe" },
+    // Add more users here as needed
+  ];
+
+  return userDatabase.map((user) => ({
+    username: user.username,
+  }));
+}
+
+// 2. Accept `params` as a prop to get the dynamic username.
+const SingleUserPage = ({ params }: { params: { username: string } }) => {
+  const username = params.username;
+
   return (
     <div className="">
       <Breadcrumb>
@@ -35,7 +52,8 @@ const SingleUserPage = () => {
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbPage>John Doe</BreadcrumbPage>
+            {/* 3. Use the dynamic username in the page title */}
+            <BreadcrumbPage>{username}</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
@@ -126,11 +144,13 @@ const SingleUserPage = () => {
               </div>
               <div className="flex items-center gap-2">
                 <span className="font-bold">Username:</span>
-                <span>john.doe</span>
+                {/* 3. Use the dynamic username here */}
+                <span>{username}</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="font-bold">Email:</span>
-                <span>john.doe@gmail.com</span>
+                {/* 3. Use the dynamic username here */}
+                <span>{username}@gmail.com</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="font-bold">Phone:</span>
@@ -163,7 +183,8 @@ const SingleUserPage = () => {
                 <AvatarImage src="https://avatars.githubusercontent.com/u/1486366" />
                 <AvatarFallback>JD</AvatarFallback>
               </Avatar>
-              <h1 className="text-xl font-semibold">John Doe</h1>
+              {/* 3. Use the dynamic username here */}
+              <h1 className="text-xl font-semibold">{username}</h1>
             </div>
             <p className="text-sm text-muted-foreground">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
